@@ -1,3 +1,3 @@
 #!/bin/sh
-onlyname=`echo $1 | sed 's/\.[^/.]*$//'`
+onlyname=${1%.*}
 avconv -i $1 -acodec copy ${onlyname}.m4a
